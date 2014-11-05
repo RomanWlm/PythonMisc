@@ -12,6 +12,8 @@ user = sys.argv[2]
 passwd = sys.argv[3]
 processName = sys.argv[4]
 
+##TODO check arg
+ 
 if(len(sys.argv)>5) :
 	if(str(sys.argv[5]).isdigit()):
 		count = str(sys.argv[5])
