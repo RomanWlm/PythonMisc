@@ -1,6 +1,9 @@
-import pxssh
 import sys
-
+try:
+	import pxssh
+except ImportError, e:	
+	print str(e)+" -- Please check that pexpect is installed on your machine : '$> pip install pexpect'"
+	sys.exit(-1)
 ## Args : hostname, user, passwd, Java ProcessName, expected count (optional) 
 if( len(sys.argv) < 5) :
 	print "Wring number of arguments : expect at least 4"
